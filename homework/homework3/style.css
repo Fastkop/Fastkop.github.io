@@ -1,0 +1,28 @@
+.input--sm {
+    width: 150px;
+}
+
+.button {
+    padding: 10px;
+    background: red;
+}
+.form-contaienr {
+    max-width: 500px;
+    margin: 31px auto;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px #000;
+}
+
+.input-label {
+    width: 145px;
+    font-weight: bold;
+    float: left;
+    padding-top: 6px;
+}
+
+.input-container {
+    padding: 10px 0;
+}
+
