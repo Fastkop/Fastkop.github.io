@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Servlet Quiz</title>
+</head>
+<body>
+<ol>
+    <li><p can a post request be bookmarked?</p>
+        <p >  
+		No, because if we can't bookmark the paramters, so if we send saved post request, the server
+		is gonna recieve the post request with no paramters and not be able to know what to do with it.
+	 </p>
+    </li>
+
+    <li><p what is the purpose of request dispatching??</p>
+	    <p>
+		    Request dispatching is extermly important and needed for including the data or forwarding the request
+		    to include the data of anoter servlet/page.
+	    </p>
+    </li>
+    <li><p what's the difference between request dispatcher and send redirect?
+    </p>
+        <p >The RequestDispatcher interface allows you to do a server side forward/include whereas sendRedirect() does a client side redirect. 
+
+SendRedirect() will search the content between the servers. it is slow because it has to intimate the browser by sending the URL of the content. then browser will create a new request for the content within the same server or in another one. 
+
+RquestDispatcher is for searching the content within the server i think. its the server side process and it is faster compare to the SendRedirect() method. but the thing is that it will not intimate the browser in which server it is searching the required date or content, neither it will not ask the browser to change the URL in URL tab. so it causes little inconvenience to the user.
+	</p>
+    <li><p >what's an attriubute?
+    </p>
+		    <p> 
+			    Attributes are objects that are attached to various scopes and can be modified, retrieved or removed. Attributes can be read, created, updated and deleted by the web container as well as our application code. We have methods in the Servlet API to add, modif, retrieve and remove attributes. When an object is added to an attribute in any scope, it is called binding as the object is bound into a scoped attribute with a given name
+		    </p>
+    </li>
+    <li><p what's the difference between attriubutes and paramaters??</p>
+	    <p> paramters are read only and sent by the user or set in web.xml
+		    attriubtes are set and manipulated on the server side.
+	    </p>
+    </li>
+    <li><p >Dangers of using attriubutes</p>
+        <p >
+		If we try to access an attriubute and it is not there an exeception will be thrown.
+		Attriubutes are shared depending on the scope, if we change one, it may effect the
+		other servlets using that variable at the smae time, if it si the same key.
+        </p>
+    </li>
+    <li><p what does http mean it is statless protocol give an example?</p>
+        <p >
+            it means that it does not save or keep the state of the request,
+	    if we send a get request it just send request, and does not keep data like
+	    who sent, what platform, time sent, it does not remember and does not require the internet network to stay one.
+	    example of stateful protocol is FTP, where if an error occured it is required to resend the file again.
+        </p>
+    </li>
+
+    <li><p >give 5 methods to for mainating state information?</p>
+        <p >
+	    Query String
+	Cookies
+	Form Methods (Get and Post)
+	Viewstate 
+	Session (Dedicated web server)
+	Session (Database)
+	Local Persistence 
+        </p>
+
+    </li>
+    <li><p how logn does a session last? </p>
+        <p >
+		by default 30 minutes of inactivity
+        </p>
+    </li>
+        <li><p how long does a cookie last? </p>
+        <p >
+		cookie is used as q unique session idenetifier to save, read and update data for each session
+		in other words unique users active
+                by default when the window is closed.
+        </p>
+    </li>
+        <li><p what is the purpise of url rewriting? </p>
+        <p >
+                If your browser does not support cookies, URL rewriting provides you with another session tracking alternative. URL rewriting is a method in which the requested URL is modified to include a session ID. There are several ways to perform URL rewriting.
+Here we are discussing session management technique in which we pass control from one servlet to another. The Syntax for passing control from one servlet to another is as follows
+        </p>
+    </li>
+        <li><p how logn does a session last? </p>
+        <p >
+                by default 30 minutes of inactivity
+        </p>
+    </li>
+        <li><p  why does the attriubte report null for mainaiting state demo? </p>
+        <p >
+                so if the atriubute wasn't submitted we would not get an exception or a logical error.
+        </p>
+    </li>
+</ol>
+</body>
+</html>
