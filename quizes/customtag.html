@@ -1,0 +1,86 @@
+<html>
+<head lang="en-us">
+    <title> JSP Custom Tags Quiz </title>
+</head>
+
+<body>
+<h2> Answers for Custom Tags Quiz</h2>
+<ol>
+
+    <li><span> Rewrite the JSP page in the first demo (forEach) to use scripting instead of the JSTL forEach. </span>
+        <div>
+            <% for (Student student : (Student []) request.getAttribute("students")) { %> <%= student.getName() %> <%= student.getAge() %> <% } %>
+
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> How do custom tags relate to JSTL? </span>
+        <div>
+             The Library and The TLD files will be attached with our project but
+            it has the same funcionality and Behavior with the JSTL
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> What is the role of the URI in the TLD and the taglib directive? </span>
+        <div>
+            The web container uses URI while validating the tags, which will tell the web container where the
+            actual TLD file is located.
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> What is a tag handler class?  </span>
+        <div>
+		tag handlers is where we define tags and actions can be found in tagext package.
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> What is the role of attribute setters in a tag handler class?  </span>
+        <div>
+		will call process the attriubtes coming from the jsp  and make the bind tag handler class.
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> What is the role of the doTag() method in a tag handler class? </span>
+        <div>
+            renders custom tags.
+        </div>
+
+    </li>
+    <br>
+
+
+    <li>
+        <span> What does the operation getJspContext().getOut().write("Hi Bob") do when called in a doTag() method?   </span>
+        <div>
+		get output from current context and write hibob
+        </div>
+
+    </li>
+    <br>
+
+
+    <li><span> What does the operation getJspBody().invoke(null) do when called in a doTag() method?  </span>
+        <div>
+		get the data from the custom tag body and put it on the output stream, if null assiociate to the fragment.
+        </div>
+    </li>
+    <br>
+
+</ol>
+</body>
+</html>
