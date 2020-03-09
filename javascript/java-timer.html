@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title> Javascript Exercises </title>
+</head>
+
+<body>
+    <h2> Answers for Javascript Exercises</h2>
+    <ol>
+
+        <li> <span> 
+                What is the difference between the following 2 statements?<br>
+                setTimeout(booyah , 2000);<br>
+                setTimeout(booyah(), 2000);<br>
+             </span>
+            <div>
+                setTimeout(booyah, 2000) :  It waits for 2000 ms before loading the function.<br>
+                setTimeout(booyah(), 2000) :  It calls the function immediately, rather than waiting for the specified time<br>
+            </div>
+        </li><br>
+        <li> <span> 
+            What do the following 2 alerts display (answer without running the code)<br>
+            </span>
+            <div>
+                it alerts 6 twice
+            </div>
+        </li> <br>
+        <li> <span> Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that 
+                says "BOOYAH!"</span>
+            <div>
+		    function booyah(){
+		    alert("booyah);
+		    }
+		    function booyah2(){
+		    alert("booyah2");
+		    }
+		    setTimeout(booyah, 2000);
+		    setTimeout(booyah2, 2000);
+            </div>
+
+        </li><br>
+
+        <li> <span> What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons 
+                for using it)?  </span>
+            <div>
+                    HTML with minimal JavaScript inside is called Unobtrusive Javascript. It uses the DOM to attach and execute all JavaScript to the web page.<br>
+                    The practical application of using Unobtrusive Javascript is:<br>
+                            visitors use it without thinking about it.</li>
+                            any browser, even when they fail. If features cannot be presented properly, they
+            </div>
+	</li>
+</body>
+</html>
