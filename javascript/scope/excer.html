@@ -1,0 +1,96 @@
+<html >
+<head lang="en-us">
+    <title> Scope Excercise </title>
+</head>
+<body>
+    <h2> Answers for Scope Excercise</h2>
+    <ol>
+
+        <li>
+            <span> Determine what this Javascript code will print out (without running it): </span>
+            <div>
+                10, 1
+            </div>
+
+        </li><br>
+
+        <li> <span> What is the difference between a method and function? </span>
+            <div>
+            	method returns nothing, functions returns some values
+            </div>
+
+        </li> <br>
+
+        <li> <span> What does 'this' refer to when used in a Java method? </span>
+            <div>
+            	the current class we are operating on
+            </div>
+
+        </li><br>
+
+
+        <li> <span> What does 'this' refer to when used in a JavaScript method? </span>
+            <div>
+            	enclosed object for the method
+            </div>
+
+        </li><br>
+
+
+        <li> <span> What does 'this' refer to when used in a JavaScript constructor function? </span>
+            <div>
+            	the global object for the class
+            </div>
+
+        </li><br>
+
+        <li> <span> Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing
+                keyword 'this' .When f is called by x.f( ), what does 'this' refer to? </span>
+            <div>
+            	object x
+            </div>
+
+        </li><br>
+
+        <li> <span> What is a free variable in JavaScript? </span>
+            <div>
+            	similar to global variable in java
+            </div>
+
+        </li><br>
+        <li> <span> Create an object that has properties with name = "fred" and
+                major="music" and a property that is a function that takes 2 numbers
+                and returns the smallest of the two, or the square of the two if they
+                are equal. </span>
+            <p>
+            	var obj {
+            	name: "fred",
+            	major: "music",
+            	value: function(a,b){
+            	if (a<b) 
+            		return a;
+            		else if( a>b)
+            		return b
+            		else 
+            		return a*b}
+            		}>
+            </p>
+
+        </li><br>
+        <li> <span> Write Javascript code for creating three Employee objects using the
+                "new" keyword and a constructor function. Employee objects have
+                the following fields: name, salary, position </span>
+            <p>
+            	constructur Employee(name, salary, position){
+            	this.name =  name;
+            	this.salary = salary;
+            	this.position =  position
+            	}
+            	var emp =  new Employee("ahmad", 2000, "SE");
+            	This is in the new javascript 
+            	old javascript replace the keyword constructur with function
+            </p>
+        </li><br>
+    </ol>
+</body>
+</html>
