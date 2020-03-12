@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answers</title>
+</head>
+<body>
+<h1>Javascript Module Exercises</h1>
+<p >A1. undefined 8 8 9 10 1 </p>
+<p >A2. Global scope is a scope where anyone anywhere can access our code (variables or functions). Local scope is limited to the scope of our javascript code either inside modules or functions. </p>
+<p >A3. a). No  b). Yes  c). No d).Yes e). Yes  </p>
+<p >A6.</p>
+<pre>
+var count=(function () {
+    var counter=0;
+    return {
+        add:function () {
+            return counter+=1;
+        },
+        reset:function () {
+            counter=0;
+        }
+    } ;
+}());
+</pre>
+<p >A7. Free variables are simply the variables that are neither locally declared nor passed as parameter. In this case counter is a free variable. </p>
+<p >A8.</p>
+<pre>
+var make_adder = (function (x) {
+    var counter=0;
+    return function() {
+        return counter+=x;
+    };
+});
+</pre>
+<p >A9.</p>
+<pre>
+Private Field: name
+Private Field: age
+Private Field: salary
+Public Method: setAge(newAge)
+Public Method: setSalary(newSalary)
+Public Method: setName(newName)
+Private Method: getAge()
+Private Method: getSalary()
+Private Method: getName()
+Public Method: increaseSalary(percentage) // uses private getSalary()
+Public Method: incrementAge() // uses private getAge()
+</pre>
+<p >A10. </p>
+<pre>
+var Employee = (function () {
+    let name;
+    let age;
+    let salary;
+    let setAge=function (newAge) {
+        age=newAge;
+    };
+    let setSalary=function (newSalary) {
+        salary=newSalary;
+    };
+    let setName=function (newName) {
+        name=newName;
+    };
+    let getAge=function () {
+        return age;
+    };
+    let getSalary=function () {
+       return salary;
+    };
+    let getName=function () {
+        return name;
+    };
+    let increaseSalary=function (percentage) {
+        let s=getSalary();
+       return s+=((s*percentage)/100);
+    };
+    let incrementAge=function () {
+        let ag=getAge();
+        return ag++;
+    };
+    return {
+        setAge:setAge,
+        setSalary:setSalary,
+        setName:setName,
+        increaseSalary:increaseSalary,
+        incrementAge:incrementAge
+    };
+})();
+</pre>
+<p >A11. </p>
+<pre>
+var Employee = (function () {
+    let name;
+    let age;
+    let salary;
+    let getAge=function () {
+        return age;
+    };
+    let getSalary=function () {
+       return salary;
+    };
+    let getName=function () {
+        return name;
+    };
+    return {
+        setAge: function (newAge) {
+            age=newAge;},
+        setSalary: function (newSalary) {
+            salary=newSalary;},
+        setName: function (newName) {
+            name=newName;},
+        increaseSalary: function (percentage) {
+            let s=getSalary();
+            return s+=((s*percentage)/100);},
+        incrementAge: function () {
+            let ag=getAge();
+            return ag++;}
+    };
+})();
+</pre>
+<p >A12.  </p>
+<pre>
+var Employee = (function () {
+    let name;
+    let age;
+    let salary;
+    let myObject= {};
+    let getAge=function () {
+        return age;
+    };
+    let getSalary=function () {
+       return salary;
+    };
+    let getName=function () {
+        return name;
+    };
+    myObject.setAge = function (newAge) {
+        age=newAge;};
+    myObject.setSalary = function (newSalary) {
+        salary=newSalary;};
+    myObject.setName = function (newName) {
+        name=newName;};
+    myObject.increaseSalary = function (percentage) {
+        let s=getSalary();
+        return s+=((s*percentage)/100);};
+    myObject.incrementAge = function () {
+        let ag=getAge();
+        return ag++;};
+    return myObject;
+})();
+</pre>
+<p >A13. </p>
+<pre>
+var Employee = (function () {
+    let name;
+    let age;
+    let salary;
+    let setAge=function (newAge) {
+        age=newAge;
+    };
+    let setSalary=function (newSalary) {
+        salary=newSalary;
+    };
+    let setName=function (newName) {
+        name=newName;
+    };
+    let getAge=function () {
+        return age;
+    };
+    let getSalary=function () {
+        return salary;
+    };
+    let getName=function () {
+        return name;
+    };
+    let increaseSalary=function (percentage) {
+        let s=getSalary();
+        return s+=((s*percentage)/100);
+    };
+    let incrementAge=function () {
+        let ag=getAge();
+        return ag++;
+    };
+    return {
+        setAge:setAge,
+        setSalary:setSalary,
+        setName:setName,
+        increaseSalary:increaseSalary,
+        incrementAge:incrementAge
+    };
+})();
+var address;
+Employee.setAddress = function (newAddress) {
+    address=newAddress;
+};
+Employee.gerAddress = function () {
+    return address;
+};</pre>
+<p >A14. Error: Hattori </p>
+<p >A15. Success: Hattori </p>
+<p >A16. </p>
+<pre>
+    success
+    error
+</pre>
+</body>
+</html>
